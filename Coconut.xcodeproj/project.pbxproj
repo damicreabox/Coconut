@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		__src_cc_ref_Sources/Macros.swift /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Macros.swift /* Macros.swift */; };
+		__src_cc_ref_Sources/main.swift /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/main.swift /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		__PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Coconut.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/Macros.swift /* Macros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Sources/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
+		"_____Product_Coconut" /* Coconut */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Coconut; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		"___LinkPhase_Coconut" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		"___RootGroup_" = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Package.swift /* Package.swift */,
+				"_____Configs_" /* Configs */,
+				"_____Sources_" /* Sources */,
+				__PBXFileRef_Tests /* Tests */,
+				"____Products_" /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		"____Products_" /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"_____Product_Coconut" /* Coconut */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"_____Configs_" /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		"_____Sources_" /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_Coconut" /* Coconut */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_Coconut" /* Coconut */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/Macros.swift /* Macros.swift */,
+				__PBXFileRef_Sources/main.swift /* main.swift */,
+			);
+			name = Coconut;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"______Target_Coconut" /* Coconut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_Coconut" /* Build configuration list for PBXNativeTarget "Coconut" */;
+			buildPhases = (
+				CompilePhase_Coconut /* Sources */,
+				"___LinkPhase_Coconut" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coconut;
+			productName = Coconut;
+			productReference = "_____Product_Coconut" /* Coconut */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "Coconut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = "___RootGroup_";
+			productRefGroup = "____Products_" /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"______Target_Coconut" /* Coconut */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CompilePhase_Coconut /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				__src_cc_ref_Sources/Macros.swift /* Macros.swift in Sources */,
+				__src_cc_ref_Sources/main.swift /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		_ReleaseConf_Coconut /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = "/Users/dami/XCode/Creabox/Coconut/Packages/CGtk-1.0.0";
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/gtk+3/3.22.1/lib",
+					"-lgtk-3",
+					"-L/usr/local/Cellar/gtk+3/3.22.1/lib",
+					"-lgdk-3",
+					"-L/usr/local/Cellar/pango/1.40.3/lib",
+					"-lpango-1.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/pango/1.40.3/lib",
+					"-lpangocairo-1.0",
+					"-L/usr/local/Cellar/pango/1.40.3/lib",
+					"-lpango-1.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/gdk-pixbuf/2.36.0/lib",
+					"-lgdk_pixbuf-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo-gobject",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/atk/2.22.0/lib",
+					"-latk-1.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo-gobject",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/gdk-pixbuf/2.36.0/lib",
+					"-lgdk_pixbuf-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgio-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/gtk+3/3.22.1/include/gtk-3.0 -I/usr/local/Cellar/gtk+3/3.22.1/include/gtk-3.0 -I/usr/local/Cellar/pango/1.40.3/include/pango-1.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/pango/1.40.3/include/pango-1.0 -I/usr/local/Cellar/pango/1.40.3/include/pango-1.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/gdk-pixbuf/2.36.0/include/gdk-pixbuf-2.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/atk/2.22.0/include/atk-1.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/gdk-pixbuf/2.36.0/include/gdk-pixbuf-2.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		"___DebugConf_Coconut" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = "/Users/dami/XCode/Creabox/Coconut/Packages/CGtk-1.0.0";
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L/usr/local/Cellar/gtk+3/3.22.1/lib",
+					"-lgtk-3",
+					"-L/usr/local/Cellar/gtk+3/3.22.1/lib",
+					"-lgdk-3",
+					"-L/usr/local/Cellar/pango/1.40.3/lib",
+					"-lpango-1.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/pango/1.40.3/lib",
+					"-lpangocairo-1.0",
+					"-L/usr/local/Cellar/pango/1.40.3/lib",
+					"-lpango-1.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/gdk-pixbuf/2.36.0/lib",
+					"-lgdk_pixbuf-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo-gobject",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/atk/2.22.0/lib",
+					"-latk-1.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo-gobject",
+					"-L/usr/local/Cellar/cairo/1.14.6_1/lib",
+					"-lcairo",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/gdk-pixbuf/2.36.0/lib",
+					"-lgdk_pixbuf-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgio-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lgobject-2.0",
+					"-L/usr/local/Cellar/glib/2.50.0/lib",
+					"-lglib-2.0",
+					"-L/usr/local/opt/gettext/lib",
+					"-lintl",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/gtk+3/3.22.1/include/gtk-3.0 -I/usr/local/Cellar/gtk+3/3.22.1/include/gtk-3.0 -I/usr/local/Cellar/pango/1.40.3/include/pango-1.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/pango/1.40.3/include/pango-1.0 -I/usr/local/Cellar/pango/1.40.3/include/pango-1.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/gdk-pixbuf/2.36.0/include/gdk-pixbuf-2.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/atk/2.22.0/include/atk-1.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/cairo/1.14.6_1/include/cairo -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/gdk-pixbuf/2.36.0/include/gdk-pixbuf-2.0 -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/glib/2.50.0/include/glib-2.0 -I/usr/local/Cellar/glib/2.50.0/lib/glib-2.0/include -I/usr/local/opt/gettext/include";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"_____Release_" /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		"_______Debug_" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = __PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		"___RootConfs_" /* Build configuration list for PBXProject "Coconut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"_______Debug_" /* Debug */,
+				"_____Release_" /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_Coconut" /* Build configuration list for PBXNativeTarget "Coconut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_Coconut" /* Debug */,
+				_ReleaseConf_Coconut /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
+}
