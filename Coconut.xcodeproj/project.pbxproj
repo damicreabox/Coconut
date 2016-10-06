@@ -7,16 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374CBA951DA6BE6200B500AD /* BuilderUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBA941DA6BE6200B500AD /* BuilderUi.swift */; };
+		374CBA981DA6BEBD00B500AD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBA971DA6BEBD00B500AD /* Application.swift */; };
+		374CBA9A1DA6BEC600B500AD /* Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBA991DA6BEC600B500AD /* Cocoa.swift */; };
+		374CBA9D1DA6C09900B500AD /* SimpleApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBA9C1DA6C09900B500AD /* SimpleApplicationDelegate.swift */; };
+		374CBAA31DA6C83400B500AD /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBAA21DA6C83400B500AD /* Nib.swift */; };
+		374CBAA51DA6CD4B00B500AD /* MainNibSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBAA41DA6CD4B00B500AD /* MainNibSample.swift */; };
+		374CBAA71DA6D08100B500AD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBAA61DA6D08100B500AD /* View.swift */; };
+		374CBAA91DA6D0A600B500AD /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CBAA81DA6D0A600B500AD /* Window.swift */; };
 		__src_cc_ref_Sources/Macros.swift /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/Macros.swift /* Macros.swift */; };
 		__src_cc_ref_Sources/main.swift /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/main.swift /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374572DD1DA5A56C00156F71 /* builder.ui */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; path = builder.ui; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xml; };
+		374CBA941DA6BE6200B500AD /* BuilderUi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderUi.swift; sourceTree = "<group>"; };
+		374CBA971DA6BEBD00B500AD /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		374CBA991DA6BEC600B500AD /* Cocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocoa.swift; sourceTree = "<group>"; };
+		374CBA9C1DA6C09900B500AD /* SimpleApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleApplicationDelegate.swift; sourceTree = "<group>"; };
+		374CBAA21DA6C83400B500AD /* Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
+		374CBAA41DA6CD4B00B500AD /* MainNibSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNibSample.swift; sourceTree = "<group>"; };
+		374CBAA61DA6D08100B500AD /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		374CBAA81DA6D0A600B500AD /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Coconut.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/Macros.swift /* Macros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Tests /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
 		"_____Product_Coconut" /* Coconut */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Coconut; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -31,13 +47,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374CBA961DA6BEAF00B500AD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				374CBA991DA6BEC600B500AD /* Cocoa.swift */,
+				374CBA971DA6BEBD00B500AD /* Application.swift */,
+				374CBAA21DA6C83400B500AD /* Nib.swift */,
+				374CBAA61DA6D08100B500AD /* View.swift */,
+				374CBAA81DA6D0A600B500AD /* Window.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		374CBA9B1DA6C08B00B500AD /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				374CBA9C1DA6C09900B500AD /* SimpleApplicationDelegate.swift */,
+				374CBAA41DA6CD4B00B500AD /* MainNibSample.swift */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		"___RootGroup_" = {
 			isa = PBXGroup;
 			children = (
 				__PBXFileRef_Package.swift /* Package.swift */,
 				"_____Configs_" /* Configs */,
 				"_____Sources_" /* Sources */,
-				__PBXFileRef_Tests /* Tests */,
 				"____Products_" /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,8 +105,12 @@
 		"_______Group_Coconut" /* Coconut */ = {
 			isa = PBXGroup;
 			children = (
+				374CBA9B1DA6C08B00B500AD /* Sample */,
+				374CBA961DA6BEAF00B500AD /* Application */,
+				374572DD1DA5A56C00156F71 /* builder.ui */,
 				__PBXFileRef_Sources/Macros.swift /* Macros.swift */,
 				__PBXFileRef_Sources/main.swift /* main.swift */,
+				374CBA941DA6BE6200B500AD /* BuilderUi.swift */,
 			);
 			name = Coconut;
 			path = Sources;
@@ -125,8 +165,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				374CBA981DA6BEBD00B500AD /* Application.swift in Sources */,
+				374CBAA91DA6D0A600B500AD /* Window.swift in Sources */,
+				374CBA9A1DA6BEC600B500AD /* Cocoa.swift in Sources */,
+				374CBAA31DA6C83400B500AD /* Nib.swift in Sources */,
 				__src_cc_ref_Sources/Macros.swift /* Macros.swift in Sources */,
+				374CBAA51DA6CD4B00B500AD /* MainNibSample.swift in Sources */,
+				374CBAA71DA6D08100B500AD /* View.swift in Sources */,
 				__src_cc_ref_Sources/main.swift /* main.swift in Sources */,
+				374CBA951DA6BE6200B500AD /* BuilderUi.swift in Sources */,
+				374CBA9D1DA6C09900B500AD /* SimpleApplicationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

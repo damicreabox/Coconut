@@ -9,6 +9,13 @@
 import Foundation
 import CGtk
 
+func gtkScreenPositionFromCocoa(origin: NSPoint) -> NSPoint {
+    
+    let screen = gdk_screen_get_default()
+    let height = gdk_screen_get_height(screen)
+    return NSPoint(x: origin.x, y: CGFloat(height - Int32(origin.y)))
+}
+
 func toWindow(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkWindow> {
     return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkWindow>.self)
 }
