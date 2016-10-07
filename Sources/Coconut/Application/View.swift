@@ -18,18 +18,17 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
     
     // --- Init ---
     
-    init(widget: UnsafeMutablePointer<GtkWidget>?) {
-        self.widget = widget
+    init() {
     }
     
     // --- Size ---
     
     public var frame : NSRect {
-        return NSRect(x: 0, y: 0, width: 0, height: 0)
+        return NSRect(origin: NSPoint(x: 0, y: 0), size: NSSize(width: 0, height: 0))
     }
     
     public var bounds : NSRect {
-        return NSRect(x: 0, y: 0, width: 0, height: 0)
+        return NSRect(origin: NSPoint(x: 0, y: 0), size: NSSize(width: 0, height: 0))
     }
     
     public func draw(_ dirtyRect: NSRect) {
@@ -80,7 +79,7 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
     
     // --- Internal GTK ---
     
-    internal func redraw(widget parent: UnsafeMutablePointer<GtkWidget>) {
-        
+    internal func redraw(widget parent: UnsafeMutablePointer<GtkWidget>) -> UnsafeMutablePointer<GtkWidget>? {
+        return nil
     }
 }

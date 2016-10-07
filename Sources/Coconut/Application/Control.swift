@@ -9,28 +9,11 @@
 import Foundation
 
 public class Control : View {
+
+    public internal(set) var action : Action
     
-    private var actionSelector: Selector? = nil
-    
-    public var action: Selector? {
-        
-        get {
-            return actionSelector
-        }
-        
-        set {
-            self.actionSelector = action
-        }
-    }
-    
-    private weak var actionTarget: AnyObject? = nil
-    
-    weak var target: AnyObject? {
-        get{
-            return actionTarget
-        }
-        set{
-            actionTarget = target
-        }
+    init(action: Action) {
+        self.action = action
+        super.init()
     }
 }

@@ -36,7 +36,7 @@ public class Window {
     public func makeKeyAndOrderFront(_ sender: Any?) {
         
         // Display view
-        contentView?.redraw(widget: self.window)
+        _ = contentView?.redraw(widget: self.window)
         
         /* Now that we are done packing our widgets, we show them all
          * in one go, by calling gtk_widget_show_all() on the window.

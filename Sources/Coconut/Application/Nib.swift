@@ -22,7 +22,7 @@ public class Nib {
     }
     
     public func instantiate(withOwner owner: Any?,
-                     topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray>?) -> Bool {
+                     topLevelObjects: UnsafeMutablePointer<NSArray>?) -> Bool {
         
         switch name {
         case "mainNib":
