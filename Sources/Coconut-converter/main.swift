@@ -7,16 +7,17 @@
 //
 
 import Foundation
-import SWXMLHash
+import AEXML
 
 let xmlToParse = URL(fileURLWithPath: "Files/Converter/Nibs/MainMenu.xib")
 let data = try? Data(contentsOf: xmlToParse)
-let xml = SWXMLHash.parse(data!)
 
+let xmlDoc = try AEXMLDocument(xml: data!)
 
-do {
-    let node = try xml.byKey("document").byKey("dependencies")
-    print("\(node.description)")
-} catch {
-    print("Error : \(error)")
+// prints the same XML structure as original
+print(xmlDoc.xml)
+
+// prints cats, dogs
+for child in xmlDoc.root.children {
+    print(child.name)
 }

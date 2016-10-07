@@ -17,7 +17,7 @@
             productRefGroup = ____Products_;
             projectDirPath = '';
             projectRoot = '';
-            targets = (______Target_SWXMLHash, ______Target_Coconut, ______Target_Coconut_converter);
+            targets = (______Target_AEXML, ______Target_Coconut, ______Target_Coconut_converter);
         };
         '__PBXFileRef_Package.swift' = {
             isa = PBXFileReference;
@@ -44,79 +44,109 @@
             children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_, '__PBXFileRef_Files','__PBXFileRef_Tests', Dependencies_, _______Tests_, ____Products_);
             sourceTree = '<group>';
         };
-        _______Group_SWXMLHash = {
+        _______Group_AEXML = {
             isa = PBXGroup;
-            name = 'SWXMLHash';
-            path = 'Packages/SWXMLHash-3.0.2/Source';
+            name = 'AEXML';
+            path = 'Packages/AEXML-4.0.1/Sources';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Packages/SWXMLHash-3.0.2/Source/SWXMLHash+TypeConversion.swift', '__PBXFileRef_Packages/SWXMLHash-3.0.2/Source/SWXMLHash.swift');
+            children = ('__PBXFileRef_Packages/AEXML-4.0.1/Sources/Document.swift', '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Element.swift', '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Error.swift', '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Options.swift', '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Parser.swift');
         };
-        '__PBXFileRef_Packages/SWXMLHash-3.0.2/Source/SWXMLHash+TypeConversion.swift' = {
+        '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Document.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
-            path = 'SWXMLHash+TypeConversion.swift';
+            path = 'Document.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/SWXMLHash-3.0.2/Source/SWXMLHash.swift' = {
+        '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Element.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
-            path = 'SWXMLHash.swift';
+            path = 'Element.swift';
             sourceTree = '<group>';
         };
-        ______Target_SWXMLHash = {
+        '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Error.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Error.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Options.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Options.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Parser.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Parser.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_AEXML = {
             isa = PBXNativeTarget;
-            buildConfigurationList = _______Confs_SWXMLHash;
-            buildPhases = (CompilePhase_SWXMLHash, ___LinkPhase_SWXMLHash);
+            buildConfigurationList = _______Confs_AEXML;
+            buildPhases = (CompilePhase_AEXML, ___LinkPhase_AEXML);
             buildRules = ();
             dependencies = ();
-            name = 'SWXMLHash';
-            productName = SWXMLHash;
-            productReference = _____Product_SWXMLHash;
+            name = 'AEXML';
+            productName = AEXML;
+            productReference = _____Product_AEXML;
             productType = 'com.apple.product-type.framework';
         };
-        _____Product_SWXMLHash = {
+        _____Product_AEXML = {
             isa = PBXFileReference;
             explicitFileType = 'wrapper.framework';
-            path = 'SWXMLHash.framework';
+            path = 'AEXML.framework';
             sourceTree = BUILT_PRODUCTS_DIR;
         };
-        CompilePhase_SWXMLHash = {
+        CompilePhase_AEXML = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Packages/SWXMLHash-3.0.2/Source/SWXMLHash+TypeConversion.swift', '__src_cc_ref_Packages/SWXMLHash-3.0.2/Source/SWXMLHash.swift');
+            files = ('__src_cc_ref_Packages/AEXML-4.0.1/Sources/Document.swift', '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Element.swift', '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Error.swift', '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Options.swift', '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Parser.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
-        '__src_cc_ref_Packages/SWXMLHash-3.0.2/Source/SWXMLHash+TypeConversion.swift' = {
+        '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Document.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/SWXMLHash-3.0.2/Source/SWXMLHash+TypeConversion.swift';
+            fileRef = '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Document.swift';
         };
-        '__src_cc_ref_Packages/SWXMLHash-3.0.2/Source/SWXMLHash.swift' = {
+        '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Element.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/SWXMLHash-3.0.2/Source/SWXMLHash.swift';
+            fileRef = '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Element.swift';
         };
-        ___LinkPhase_SWXMLHash = {
+        '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Error.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Error.swift';
+        };
+        '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Options.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Options.swift';
+        };
+        '__src_cc_ref_Packages/AEXML-4.0.1/Sources/Parser.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/AEXML-4.0.1/Sources/Parser.swift';
+        };
+        ___LinkPhase_AEXML = {
             isa = PBXFrameworksBuildPhase;
             files = ();
             runOnlyForDeploymentPostprocessing = 0;
         };
-        _______Confs_SWXMLHash = {
+        _______Confs_AEXML = {
             isa = XCConfigurationList;
-            buildConfigurations = (___DebugConf_SWXMLHash, _ReleaseConf_SWXMLHash);
+            buildConfigurations = (___DebugConf_AEXML, _ReleaseConf_AEXML);
             defaultConfigurationIsVisible = 0;
             defaultConfigurationName = Debug;
         };
-        ___DebugConf_SWXMLHash = {
+        ___DebugConf_AEXML = {
             isa = XCBuildConfiguration;
-            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Coconut.xcodeproj/SWXMLHash_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'SWXMLHash'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Coconut.xcodeproj/AEXML_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'AEXML'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
             name = Debug;
         };
-        _ReleaseConf_SWXMLHash = {
+        _ReleaseConf_AEXML = {
             isa = XCBuildConfiguration;
-            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Coconut.xcodeproj/SWXMLHash_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'SWXMLHash'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Coconut.xcodeproj/AEXML_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'AEXML'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
             name = Release;
         };
-        __Dependency_SWXMLHash = {
+        __Dependency_AEXML = {
             isa = PBXTargetDependency;
-            target = ______Target_SWXMLHash;
+            target = ______Target_AEXML;
         };
         _______Group_Coconut = {
             isa = PBXGroup;
@@ -238,7 +268,7 @@
             buildConfigurationList = _______Confs_Coconut;
             buildPhases = (CompilePhase_Coconut, ___LinkPhase_Coconut);
             buildRules = ();
-            dependencies = (__Dependency_SWXMLHash);
+            dependencies = (__Dependency_AEXML);
             name = 'Coconut';
             productName = Coconut;
             productReference = _____Product_Coconut;
@@ -329,12 +359,12 @@
         };
         ___LinkPhase_Coconut = {
             isa = PBXFrameworksBuildPhase;
-            files = (_LinkFileRef_SWXMLHash_via_Coconut);
+            files = (_LinkFileRef_AEXML_via_Coconut);
             runOnlyForDeploymentPostprocessing = 0;
         };
-        _LinkFileRef_SWXMLHash_via_Coconut = {
+        _LinkFileRef_AEXML_via_Coconut = {
             isa = PBXBuildFile;
-            fileRef = _____Product_SWXMLHash;
+            fileRef = _____Product_AEXML;
         };
         _______Confs_Coconut = {
             isa = XCConfigurationList;
@@ -374,7 +404,7 @@
             buildConfigurationList = _______Confs_Coconut_converter;
             buildPhases = (CompilePhase_Coconut_converter, ___LinkPhase_Coconut_converter);
             buildRules = ();
-            dependencies = (__Dependency_SWXMLHash);
+            dependencies = (__Dependency_AEXML);
             name = 'Coconut-converter';
             productName = Coconut_converter;
             productReference = _____Product_Coconut_converter;
@@ -397,12 +427,12 @@
         };
         ___LinkPhase_Coconut_converter = {
             isa = PBXFrameworksBuildPhase;
-            files = (_LinkFileRef_SWXMLHash_via_Coconut_converter);
+            files = (_LinkFileRef_AEXML_via_Coconut_converter);
             runOnlyForDeploymentPostprocessing = 0;
         };
-        _LinkFileRef_SWXMLHash_via_Coconut_converter = {
+        _LinkFileRef_AEXML_via_Coconut_converter = {
             isa = PBXBuildFile;
-            fileRef = _____Product_SWXMLHash;
+            fileRef = _____Product_AEXML;
         };
         _______Confs_Coconut_converter = {
             isa = XCConfigurationList;
@@ -438,19 +468,19 @@
         };
         _____Sources_ = {
             isa = PBXGroup;
-            children = (_______Group_SWXMLHash, _______Group_Coconut, _______Group_Coconut_converter);
+            children = (_______Group_AEXML, _______Group_Coconut, _______Group_Coconut_converter);
             name = Sources;
             sourceTree = '<group>';
         };
         Dependencies_ = {
             isa = PBXGroup;
-            children = (_______Group_SWXMLHash);
+            children = (_______Group_AEXML);
             name = Dependencies;
             sourceTree = '<group>';
         };
         ____Products_ = {
             isa = PBXGroup;
-            children = (_____Product_SWXMLHash, _____Product_Coconut, _____Product_Coconut_converter);
+            children = (_____Product_AEXML, _____Product_Coconut, _____Product_Coconut_converter);
             name = Products;
             sourceTree = '<group>';
         };
