@@ -16,12 +16,28 @@ func gtkScreenPositionFromCocoa(origin: NSPoint) -> NSPoint {
     return NSPoint(x: origin.x, y: CGFloat(height - Int32(origin.y)))
 }
 
+func toWidget(pointer: UnsafeMutablePointer<gpointer>?) -> UnsafeMutablePointer<GtkWidget> {
+    return unsafeBitCast(pointer, to: UnsafeMutablePointer<GtkWidget>.self)
+}
+
 func toWindow(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkWindow> {
     return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkWindow>.self)
 }
 
 func toContainer(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkContainer> {
     return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkContainer>.self)
+}
+
+func toGrid(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkGrid> {
+    return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkGrid>.self)
+}
+
+func toGPointer(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<gpointer?> {
+    return unsafeBitCast(widget, to: UnsafeMutablePointer<gpointer?>.self)
+}
+
+func toButton(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkButton> {
+    return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkButton>.self)
 }
 
 func connectSignal(object: UnsafeMutablePointer<GObject>?, signal: String, callback: @escaping GCallback) {

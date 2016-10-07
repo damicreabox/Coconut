@@ -6,10 +6,51 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		372F32B11DA813B3004C61D6 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F329B1DA813B3004C61D6 /* Application.swift */; };
+		372F32B21DA813B3004C61D6 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F329C1DA813B3004C61D6 /* Button.swift */; };
+		372F32B31DA813B3004C61D6 /* Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F329D1DA813B3004C61D6 /* Cocoa.swift */; };
+		372F32B41DA813B3004C61D6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F329E1DA813B3004C61D6 /* Color.swift */; };
+		372F32B51DA813B3004C61D6 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F329F1DA813B3004C61D6 /* Control.swift */; };
+		372F32B61DA813B3004C61D6 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A01DA813B3004C61D6 /* Nib.swift */; };
+		372F32B71DA813B3004C61D6 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A11DA813B3004C61D6 /* Screen.swift */; };
+		372F32B81DA813B3004C61D6 /* ToImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A21DA813B3004C61D6 /* ToImplement.swift */; };
+		372F32B91DA813B3004C61D6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A31DA813B3004C61D6 /* View.swift */; };
+		372F32BA1DA813B3004C61D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A41DA813B3004C61D6 /* ViewController.swift */; };
+		372F32BB1DA813B3004C61D6 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A51DA813B3004C61D6 /* Window.swift */; };
+		372F32BC1DA813B3004C61D6 /* BuilderUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A71DA813B3004C61D6 /* BuilderUi.swift */; };
+		372F32BD1DA813B3004C61D6 /* Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32A91DA813B3004C61D6 /* Callbacks.swift */; };
+		372F32BE1DA813B3004C61D6 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32AB1DA813B3004C61D6 /* ContainerView.swift */; };
+		372F32BF1DA813B3004C61D6 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32AC1DA813B3004C61D6 /* Macros.swift */; };
+		372F32C01DA813B3004C61D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32AD1DA813B3004C61D6 /* main.swift */; };
+		372F32C11DA813B3004C61D6 /* MainNibSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32AF1DA813B3004C61D6 /* MainNibSample.swift */; };
+		372F32C21DA813B3004C61D6 /* SimpleApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372F32B01DA813B3004C61D6 /* SimpleApplicationDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		372F323B1DA7B71E004C61D6 /* Coconut */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Coconut; path = Sources/Coconut; sourceTree = "<group>"; };
+		372F329B1DA813B3004C61D6 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		372F329C1DA813B3004C61D6 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		372F329D1DA813B3004C61D6 /* Cocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocoa.swift; sourceTree = "<group>"; };
+		372F329E1DA813B3004C61D6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		372F329F1DA813B3004C61D6 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		372F32A01DA813B3004C61D6 /* Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
+		372F32A11DA813B3004C61D6 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		372F32A21DA813B3004C61D6 /* ToImplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToImplement.swift; sourceTree = "<group>"; };
+		372F32A31DA813B3004C61D6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		372F32A41DA813B3004C61D6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372F32A51DA813B3004C61D6 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		372F32A61DA813B3004C61D6 /* builder.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = builder.ui; sourceTree = "<group>"; };
+		372F32A71DA813B3004C61D6 /* BuilderUi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderUi.swift; sourceTree = "<group>"; };
+		372F32A91DA813B3004C61D6 /* Callbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Callbacks.swift; sourceTree = "<group>"; };
+		372F32AA1DA813B3004C61D6 /* Coconut-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Coconut-Bridging-Header.h"; sourceTree = "<group>"; };
+		372F32AB1DA813B3004C61D6 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		372F32AC1DA813B3004C61D6 /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
+		372F32AD1DA813B3004C61D6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		372F32AF1DA813B3004C61D6 /* MainNibSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNibSample.swift; sourceTree = "<group>"; };
+		372F32B01DA813B3004C61D6 /* SimpleApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleApplicationDelegate.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Coconut.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Tests /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
 		"_____Product_Coconut" /* Coconut */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Coconut; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -24,12 +65,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372F32991DA813B3004C61D6 /* Coconut */ = {
+			isa = PBXGroup;
+			children = (
+				372F329A1DA813B3004C61D6 /* Application */,
+				372F32A61DA813B3004C61D6 /* builder.ui */,
+				372F32A71DA813B3004C61D6 /* BuilderUi.swift */,
+				372F32A81DA813B3004C61D6 /* Gtk */,
+				372F32AD1DA813B3004C61D6 /* main.swift */,
+				372F32AE1DA813B3004C61D6 /* Sample */,
+			);
+			name = Coconut;
+			path = Sources/Coconut;
+			sourceTree = "<group>";
+		};
+		372F329A1DA813B3004C61D6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				372F329B1DA813B3004C61D6 /* Application.swift */,
+				372F329C1DA813B3004C61D6 /* Button.swift */,
+				372F329D1DA813B3004C61D6 /* Cocoa.swift */,
+				372F329E1DA813B3004C61D6 /* Color.swift */,
+				372F329F1DA813B3004C61D6 /* Control.swift */,
+				372F32A01DA813B3004C61D6 /* Nib.swift */,
+				372F32A11DA813B3004C61D6 /* Screen.swift */,
+				372F32A21DA813B3004C61D6 /* ToImplement.swift */,
+				372F32A31DA813B3004C61D6 /* View.swift */,
+				372F32A41DA813B3004C61D6 /* ViewController.swift */,
+				372F32A51DA813B3004C61D6 /* Window.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		372F32A81DA813B3004C61D6 /* Gtk */ = {
+			isa = PBXGroup;
+			children = (
+				372F32A91DA813B3004C61D6 /* Callbacks.swift */,
+				372F32AA1DA813B3004C61D6 /* Coconut-Bridging-Header.h */,
+				372F32AB1DA813B3004C61D6 /* ContainerView.swift */,
+				372F32AC1DA813B3004C61D6 /* Macros.swift */,
+			);
+			path = Gtk;
+			sourceTree = "<group>";
+		};
+		372F32AE1DA813B3004C61D6 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				372F32AF1DA813B3004C61D6 /* MainNibSample.swift */,
+				372F32B01DA813B3004C61D6 /* SimpleApplicationDelegate.swift */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		"___RootGroup_" = {
 			isa = PBXGroup;
 			children = (
 				__PBXFileRef_Package.swift /* Package.swift */,
 				"_____Configs_" /* Configs */,
 				"_____Sources_" /* Sources */,
+				__PBXFileRef_Tests /* Tests */,
 				"____Products_" /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +147,7 @@
 		"_____Sources_" /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				372F323B1DA7B71E004C61D6 /* Coconut */,
+				372F32991DA813B3004C61D6 /* Coconut */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -107,6 +201,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				372F32BA1DA813B3004C61D6 /* ViewController.swift in Sources */,
+				372F32B71DA813B3004C61D6 /* Screen.swift in Sources */,
+				372F32B31DA813B3004C61D6 /* Cocoa.swift in Sources */,
+				372F32B81DA813B3004C61D6 /* ToImplement.swift in Sources */,
+				372F32BD1DA813B3004C61D6 /* Callbacks.swift in Sources */,
+				372F32B61DA813B3004C61D6 /* Nib.swift in Sources */,
+				372F32BF1DA813B3004C61D6 /* Macros.swift in Sources */,
+				372F32B41DA813B3004C61D6 /* Color.swift in Sources */,
+				372F32B91DA813B3004C61D6 /* View.swift in Sources */,
+				372F32B51DA813B3004C61D6 /* Control.swift in Sources */,
+				372F32C01DA813B3004C61D6 /* main.swift in Sources */,
+				372F32B11DA813B3004C61D6 /* Application.swift in Sources */,
+				372F32B21DA813B3004C61D6 /* Button.swift in Sources */,
+				372F32BB1DA813B3004C61D6 /* Window.swift in Sources */,
+				372F32BE1DA813B3004C61D6 /* ContainerView.swift in Sources */,
+				372F32C11DA813B3004C61D6 /* MainNibSample.swift in Sources */,
+				372F32BC1DA813B3004C61D6 /* BuilderUi.swift in Sources */,
+				372F32C21DA813B3004C61D6 /* SimpleApplicationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

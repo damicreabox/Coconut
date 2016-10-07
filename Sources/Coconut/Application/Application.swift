@@ -12,6 +12,9 @@ import CGtk
 
 public class Application {
     
+    /// Gtk application
+    internal let app : UnsafeMutablePointer<GtkApplication>
+    
     var mainNib : Nib
     var delegate : ApplicationDelegate
     
@@ -24,18 +27,21 @@ public class Application {
         
         self.delegate = delegate
         self.mainNib = nib
-    }
-    
-    public func run() {
         
         // Init GTK library
         gtk_init(nil, nil)
+        
+        // Create application
+        app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE)
         
         // Laund main nib file
         guard mainNib.instantiate(withOwner: delegate, topLevelObjects: nil) else {
             // FIXME add log
             return
         }
+    }
+    
+    public func run() {
         
         // Application did finish launching
         delegate.applicationDidFinishLaunching(Notification(name: Notification.Name.init(rawValue: "NSApplicationDidFinishLaunching")))
@@ -45,6 +51,11 @@ public class Application {
         
         // Application will terminate
         delegate.applicationWillTerminate(Notification(name: Notification.Name.init(rawValue: "NSApplicationWillTerminate")))
+    }
+    
+    /// Terminate application
+    func terminate(_ sender: Any?) {
+        
     }
 }
 
