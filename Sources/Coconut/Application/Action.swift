@@ -17,3 +17,9 @@ class EmptyAction : Action {
         print("Empty action")
     }
 }
+
+class ExitAction : Action {
+    public func perform() {
+        Application.shared().terminate(nil)
+    }
+}

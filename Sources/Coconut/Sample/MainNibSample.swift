@@ -38,7 +38,7 @@ class MainNibSample {
         window.contentView?.addSubview(Button(title: "Hello button 3"))
         window.contentView?.addSubview(Button(title: "Hello button 4"))
         window.contentView?.addSubview(Button(title: "Hello button 5"))
-        let quitButton = Button(title: "Quitter")
+        let quitButton = Button(title: "Quitter", action: ExitAction())
         window.contentView?.addSubview(quitButton)
         
         // Open window

@@ -18,7 +18,14 @@ public class Application {
     var mainNib : Nib
     var delegate : ApplicationDelegate
     
+    static var app : Application? = nil
+    
+    class func shared() -> NSApplication {
+        return app!
+    }
+    
     init?(delegate: ApplicationDelegate, andNibName name: String) {
+        
         
         // Open nib
         guard let nib = Nib(nibNamed: name, bundle: nil) else {
@@ -39,7 +46,10 @@ public class Application {
             // FIXME add log
             return
         }
+        
+        Application.app = self
     }
+    
     
     public func run() {
         
@@ -55,7 +65,7 @@ public class Application {
     
     /// Terminate application
     func terminate(_ sender: Any?) {
-        
+        gtk_main_quit()
     }
 }
 

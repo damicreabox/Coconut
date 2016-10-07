@@ -14,14 +14,11 @@ public class Window {
     /// GTK window pointer
     var window : UnsafeMutablePointer<GtkWidget>
     
-    public init(contentRect frame: NSRect) {
+    public init(contentRect frame: NSRect, title : String = "Untitled") {
         self.window = gtk_window_new (GTK_WINDOW_TOPLEVEL)
         
         // Convert point from cocoa to gtk
         let origin = gtkScreenPositionFromCocoa(origin: frame.origin)
-        
-        // Set windo title
-        gtk_window_set_title (toWindow (widget: window), "Hello World")
         
         // Set size
         gtk_window_set_default_size (toWindow (widget: window), Int32(frame.size.width), Int32(frame.size.height))
@@ -30,7 +27,10 @@ public class Window {
         gtk_window_move(toWindow(widget: window), Int32(origin.x), Int32(origin.y))
         
         // Init container
-        view = ContainerView()
+        contentView = ContainerView()
+        
+        self.title = title
+        gtk_window_set_title(toWindow(widget: window), title)
     }
     
     public func makeKeyAndOrderFront(_ sender: Any?) {
@@ -38,75 +38,44 @@ public class Window {
         // Display view
         _ = contentView?.redraw(widget: self.window)
         
-        /* Now that we are done packing our widgets, we show them all
-         * in one go, by calling gtk_widget_show_all() on the window.
-         * This call recursively calls gtk_widget_show() on all widgets
-         * that are contained in the window, directly or indirectly.
-         */
+        // Display all windows
         gtk_widget_show_all (window)
     }
     
     // --- Informations ---
     
-    public var windowNumber: Int {
-        get {
-            return 0
-        }
-    }
+    public let windowNumber: Int = -1
     
     // --- Configuring ---
     
-    internal var bgColor: Color! = nil
+    public var backgroundColor: Color! = nil
     
-    public var backgroundColor: Color! {
-        get {
-            return bgColor
-        }
-        set {
-            self.bgColor = backgroundColor
-        }
-    }
-    
-    internal var view: View? = nil
-    
-    public var contentView: View? {
-        get {
-            return view
-        }
-        set {
-            self.view = contentView
-        }
-    }
+    public var contentView: View? = nil
     
     internal var viewController: ViewController? = nil
-    
-    public var contentViewController: ViewController? {
-        get {
-            return viewController
-        }
-        set {
-            self.viewController = contentViewController
-        }
-    }
     
     // --- Sizing ---
     
     public var frame: NSRect {
         get {
-            return NSRect(x: 0, y: 0, width: 0, height: 0)
+            
+            var x: Int32 = 0
+            var y: Int32 = 0
+            gtk_window_get_position(toWindow(widget: window), &x, &y)
+            
+            var width: Int32 = 0
+            var height: Int32 = 0
+            gtk_window_get_size(toWindow(widget: window), &width, &height)
+            
+            return NSRect(origin: NSPoint(x: Int(x), y: Int(y)), size: NSSize(width: Int(width), height: Int(height)))
         }
     }
     
     // --- Titles ---
     
-    private var windowTitle : String = "Untitled"
-    
     public var title: String {
-        get {
-            return windowTitle
-        }
-        set {
-            self.windowTitle = title
+        willSet {
+            gtk_window_set_title(toWindow(widget: window), title)
         }
     }
     
