@@ -67,7 +67,7 @@ public class Window {
             var height: Int32 = 0
             gtk_window_get_size(toWindow(widget: window), &width, &height)
             
-            return NSRect(origin: NSPoint(x: Int(x), y: Int(y)), size: NSSize(width: Int(width), height: Int(height)))
+            return NSRect(origin: NSPoint(x: CGFloat(x), y: CGFloat(y)), size: NSSize(width: CGFloat(width), height: CGFloat(height)))
         }
     }
     

@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Coconut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_Coconut_converter"
+               BuildableName = "Coconut-converter"
+               BlueprintName = "Coconut-converter"
+               ReferencedContainer = "container:Coconut.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
