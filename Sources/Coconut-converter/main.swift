@@ -7,17 +7,22 @@
 //
 
 import Foundation
-import AEXML
 
-let xmlToParse = URL(fileURLWithPath: "Files/Converter/Nibs/MainMenu.xib")
-let data = try? Data(contentsOf: xmlToParse)
+let file = "Files/Converter/Nibs/MainMenu.xib"
 
-let xmlDoc = try AEXMLDocument(xml: data!)
-
-// prints the same XML structure as original
-print(xmlDoc.xml)
-
-// prints cats, dogs
-for child in xmlDoc.root.children {
-    print(child.name)
+guard FileManager.default.fileExists(atPath: file) else {
+  print("File doesn't exists")
+  exit(1)
 }
+
+let content = try String(contentsOfFile: file, encoding: String.Encoding.utf8)
+
+let url = URL(fileURLWithPath: file)
+
+guard let parser = XMLParser(contentsOf: url) else {
+  print("Parser")
+  exit(3)
+}
+
+parser.delegate = NibParserDelegate()
+parser.parse()
