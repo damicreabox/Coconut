@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Define a color
 public class Color {
     
 }

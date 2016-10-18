@@ -10,6 +10,10 @@ import Foundation
 
 class SimpleApplicationDelegate : NSObject, ApplicationDelegate {
     
+    /// Application window
+    public var window : Window? = nil
+    
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }

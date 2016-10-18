@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Define a view controller
 public class ViewController {
     
 }

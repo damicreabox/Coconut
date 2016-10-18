@@ -8,29 +8,26 @@
 
 import Foundation
 
-class MainNibSample {
+public class MainNibSample : UIFactory {
     
-    // Delegate
-    private let appDelegate : ApplicationDelegate
-    
-    // Window
-    private let window : Window
-    
-    init?(withOwner owner: Any?) {
+    public func newInstance(owner: Any?) -> Bool {
         
-        guard owner != nil && owner is ApplicationDelegate  else {
-            return nil
+        guard owner != nil && owner is SimpleApplicationDelegate  else {
+            return false
         }
         
         // Cast to app delegate
-        appDelegate = owner as! ApplicationDelegate
+        let appDelegate = owner as! SimpleApplicationDelegate
         
         // Creation de la fenetre principal
-        window = Window(contentRect: NSRect(
+        let window = Window(contentRect: NSRect(
                 origin: NSPoint(x: 0, y: 0),
                 size: NSSize(width: 200, height: 200)
             )
         )
+        
+        // Set window
+        appDelegate.window = window
         
         // Add buttons to view
         window.contentView?.addSubview(Button(title: "Hello button 1"))
@@ -43,5 +40,7 @@ class MainNibSample {
         
         // Open window
         window.makeKeyAndOrderFront(window)
+    
+        return true
     }
 }
