@@ -22,6 +22,9 @@ public class Application {
     /// App delegate
     var delegate : ApplicationDelegate
     
+    /// First responder
+    var firstResponder: Responder? = nil
+    
     /// Current App
     static var app : Application? = nil
     
@@ -47,13 +50,15 @@ public class Application {
         // FIXME GTK name
         app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE)
         
-        // Laund main nib file
-        guard mainUi.instantiate(withOwner: delegate, topLevelObjects: nil) else {
-            // FIXME add log
-            return
-        }
-        
+        // Set app
         Application.app = self
+        
+        // Laund main nib file
+        guard mainUi.instantiate(owner: self, objects: [delegate]) else {
+            // FIXME add log
+            Application.app = nil
+            return nil
+        }
     }
     
     

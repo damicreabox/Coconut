@@ -8,8 +8,15 @@
 
 import Foundation
 
+public protocol UIDefinitionDelegate {
+    func instantiate(owner: Any?, objects: [NSObjectProtocol]?) -> Bool
+}
+
 /// Class to define an UI
 public class UIDefinition {
+    
+    /// Internal UIDelegate
+    private var uiDelegate: UIDefinitionDelegate? = nil
     
     /// UI file name
     private var name : String
@@ -22,7 +29,15 @@ public class UIDefinition {
         self.bundle = bundle
     }
     
-    public func instantiate(owner: Any?, topLevelObjects: UnsafeMutablePointer<NSArray>? = nil) -> Bool {
-        return UIFactoryManager.instance.newInstance(name: name, owner: owner)
+    public func instantiate(owner: Any?, objects: [NSObjectProtocol]? = nil) -> Bool {
+        
+        // Create new instance
+        uiDelegate = UIFactoryManager.instance.newInstance(name: name)
+        if (uiDelegate == nil) {
+            return false
+        }
+        
+        // Instanciate
+        return uiDelegate!.instantiate(owner: owner, objects: objects)
     }
 }

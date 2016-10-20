@@ -11,7 +11,7 @@ import CGtk
 
 
 // Define a window
-public class Window {
+public class Window : Responder {
     
     /// GTK window pointer
     var window : UnsafeMutablePointer<GtkWidget>

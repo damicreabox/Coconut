@@ -45,6 +45,10 @@ extension NSNib {
     }
     
     public func instantiate(withOwner owner: Any?, topLevelObjects: UnsafeMutablePointer<NSArray>?) -> Bool {
-        return self.instantiate(owner: owner, topLevelObjects: topLevelObjects)
+        var objects : [NSObject]? = nil
+        if topLevelObjects != nil  {
+            objects = topLevelObjects?.pointee as! [NSObject]?
+        }
+        return self.instantiate(owner: owner, objects: objects)
     }
 }
