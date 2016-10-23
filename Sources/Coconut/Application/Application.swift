@@ -11,7 +11,7 @@ import Foundation
 import CGtk
 
 // Define an application
-public class Application {
+public class Application : Responder {
     
     /// Gtk application
     internal let app : UnsafeMutablePointer<GtkApplication>

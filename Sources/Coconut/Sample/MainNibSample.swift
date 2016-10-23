@@ -10,8 +10,25 @@ import Foundation
 
 public class MainNibSample : UIDefinitionDelegate {
     
+    // --- Implicit objects ---
+    
+    /// Application
+    private let application: Application
+    
+    /// First responder
+    private var firstResponder: Responder
+    
+    // --- External objects ---
+    
+    
     var window: Window? = nil
     
+    init() {
+        self.application = Application.shared()
+        self.firstResponder = application
+    }
+    
+    // --- Buttons ---
     
     
     
@@ -22,20 +39,20 @@ public class MainNibSample : UIDefinitionDelegate {
         }
         
         // Set application
-        let application = owner as! Application
+        //let application = owner as! Application
         
         // Test obejcts
-        guard objects != nil && objects!.count >= 2 else {
+        guard objects != nil && objects!.count >= 1 else {
             return false
         }
         
         // Find delegate
-        guard objects![1] is SimpleApplicationDelegate  else {
+        guard objects![0] is SimpleApplicationDelegate  else {
             return false
         }
         
         // Cast to app delegate
-        let appDelegate = objects![1] as! SimpleApplicationDelegate
+        let appDelegate = objects![0] as! SimpleApplicationDelegate
         
         // Creation de la fenetre principal
         window = Window(contentRect: NSRect(
