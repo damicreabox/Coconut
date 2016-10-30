@@ -8,26 +8,27 @@
 
 import Foundation
 
-typealias NSApplicationDelegate = ApplicationDelegate
-typealias NSView = View
-typealias NSViewController = ViewController
-typealias NSWindow = Window
-typealias NSScreen = Screen
-typealias NSColor = Color
-typealias NSButton = Button
-typealias NSControl = Control
+public typealias NSFontManager = FontManager
+public typealias NSApplicationDelegate = ApplicationDelegate
+public typealias NSView = View
+public typealias NSViewController = ViewController
+public typealias NSWindow = Window
+public typealias NSScreen = Screen
+public typealias NSColor = Color
+public typealias NSButton = Button
+public typealias NSControl = Control
 
-typealias NSResponder = Responder
-typealias NSAnimatablePropertyContainer = AnimatablePropertyContainer
-typealias NSUserInterfaceItemIdentification = UserInterfaceItemIdentification
-typealias NSDraggingDestination = DraggingDestination
-typealias NSAppearanceCustomization = AppearanceCustomization
-typealias NSAccessibilityElementProtocol = AccessibilityElementProtocol
-typealias NSAccessibility = Accessibility
+public typealias NSResponder = Responder
+public typealias NSAnimatablePropertyContainer = AnimatablePropertyContainer
+public typealias NSUserInterfaceItemIdentification = UserInterfaceItemIdentification
+public typealias NSDraggingDestination = DraggingDestination
+public typealias NSAppearanceCustomization = AppearanceCustomization
+public typealias NSAccessibilityElementProtocol = AccessibilityElementProtocol
+public typealias NSAccessibility = Accessibility
 
 // -- Application --
 
-typealias NSApplication = Application
+public typealias NSApplication = Application
 extension NSApplication {
     
     convenience init?(delegate: ApplicationDelegate, andNibName name: String) {
@@ -37,7 +38,7 @@ extension NSApplication {
 
 // -- Nib --
 
-typealias NSNib = UIDefinition
+public typealias NSNib = UIDefinition
 extension NSNib {
     
     convenience init?(nibNamed nibName: String, bundle: Bundle?) {

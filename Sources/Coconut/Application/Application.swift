@@ -29,7 +29,7 @@ public class Application : Responder {
     static var app : Application? = nil
     
     /// Return current App
-    class func shared() -> NSApplication {
+    public class func shared() -> NSApplication {
         return app!
     }
     
