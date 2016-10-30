@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374F880C1DBCDC320002EB4A /* MyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F880A1DBCDBA00002EB4A /* MyUI.swift */; };
 		37BDA7C31DB96B4E007F07E8 /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BDA7C21DB96B4E007F07E8 /* Responder.swift */; };
 		37E6C56E1DB8095F0095BC42 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6C56D1DB8095F0095BC42 /* File.swift */; };
 		_LinkFileRef_LibXml2Swift_via_Coconut /* LibXml2Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LibXml2Swift" /* LibXml2Swift.framework */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		374F880A1DBCDBA00002EB4A /* MyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyUI.swift; path = Sample/MyUI.swift; sourceTree = "<group>"; };
 		37BDA7C21DB96B4E007F07E8 /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
 		37E6C56D1DB8095F0095BC42 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Definition/File.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Coconut.xcodeproj/Configs/Project.xcconfig /* Coconut.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Coconut.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		"_______Group_Coconut" /* Coconut */ = {
 			isa = PBXGroup;
 			children = (
+				374F880A1DBCDBA00002EB4A /* MyUI.swift */,
 				__PBXFileRef_Sources/Coconut/main.swift /* main.swift */,
 				__PBXFileRef_Sources/Coconut/Application/Action.swift /* Application/Action.swift */,
 				__PBXFileRef_Sources/Coconut/Application/Application.swift /* Application/Application.swift */,
@@ -318,6 +321,7 @@
 				__src_cc_ref_Sources/Coconut/Application/Window.swift /* Application/Window.swift in Sources */,
 				__src_cc_ref_Sources/Coconut/Cocoa/Cocoa.swift /* Cocoa/Cocoa.swift in Sources */,
 				__src_cc_ref_Sources/Coconut/Gtk/Callbacks.swift /* Gtk/Callbacks.swift in Sources */,
+				374F880C1DBCDC320002EB4A /* MyUI.swift in Sources */,
 				__src_cc_ref_Sources/Coconut/Gtk/ContainerView.swift /* Gtk/ContainerView.swift in Sources */,
 				__src_cc_ref_Sources/Coconut/Gtk/Macros.swift /* Gtk/Macros.swift in Sources */,
 				__src_cc_ref_Sources/Coconut/Sample/MainNibSample.swift /* Sample/MainNibSample.swift in Sources */,
