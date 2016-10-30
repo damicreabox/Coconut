@@ -34,7 +34,6 @@ public class Application : Responder {
     }
     
     init?(delegate: ApplicationDelegate, uiName name: String) {
-        
         // Open ui
         guard let uiDefinition = UIDefinition(nibNamed: name, bundle: nil) else {
             return nil
@@ -49,6 +48,8 @@ public class Application : Responder {
         // Create application
         // FIXME GTK name
         app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE)
+        
+        super.init()
         
         // Set app
         Application.app = self

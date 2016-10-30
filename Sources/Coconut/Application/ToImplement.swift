@@ -1,9 +1,5 @@
 import Foundation
 
-public protocol Responder {
-    
-}
-
 public protocol AnimatablePropertyContainer {
     
 }

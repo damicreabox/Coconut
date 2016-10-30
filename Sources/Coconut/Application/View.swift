@@ -21,8 +21,8 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
     
     // --- Init ---
     
-    init() {
-    }
+    //init() {
+    //}
     
     // --- Size ---
     
