@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Define a scren
 public class Screen {
     
 }

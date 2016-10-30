@@ -10,44 +10,55 @@ import Foundation
 
 import CGtk
 
-public class Application {
+// Define an application
+public class Application : Responder {
     
     /// Gtk application
     internal let app : UnsafeMutablePointer<GtkApplication>
     
-    var mainNib : Nib
+    /// Main UI definiiton
+    var mainUi : UIDefinition
+    
+    /// App delegate
     var delegate : ApplicationDelegate
     
+    /// First responder
+    var firstResponder: Responder? = nil
+    
+    /// Current App
     static var app : Application? = nil
     
+    /// Return current App
     class func shared() -> NSApplication {
         return app!
     }
     
-    init?(delegate: ApplicationDelegate, andNibName name: String) {
+    init?(delegate: ApplicationDelegate, uiName name: String) {
         
-        
-        // Open nib
-        guard let nib = Nib(nibNamed: name, bundle: nil) else {
+        // Open ui
+        guard let uiDefinition = UIDefinition(nibNamed: name, bundle: nil) else {
             return nil
         }
         
         self.delegate = delegate
-        self.mainNib = nib
+        self.mainUi = uiDefinition
         
         // Init GTK library
         gtk_init(nil, nil)
         
         // Create application
+        // FIXME GTK name
         app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE)
         
-        // Laund main nib file
-        guard mainNib.instantiate(withOwner: delegate, topLevelObjects: nil) else {
-            // FIXME add log
-            return
-        }
-        
+        // Set app
         Application.app = self
+        
+        // Laund main nib file
+        guard mainUi.instantiate(owner: self, objects: [delegate]) else {
+            // FIXME add log
+            Application.app = nil
+            return nil
+        }
     }
     
     

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_AEXML"
-               BuildableName = "AEXML.framework"
-               BlueprintName = "AEXML"
+               BlueprintIdentifier = "______Target_LibXml2Swift"
+               BuildableName = "LibXml2Swift.framework"
+               BlueprintName = "LibXml2Swift"
                ReferencedContainer = "container:Coconut.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -73,9 +73,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_AEXML"
-            BuildableName = "AEXML.framework"
-            BlueprintName = "AEXML"
+            BlueprintIdentifier = "______Target_LibXml2Swift"
+            BuildableName = "LibXml2Swift.framework"
+            BlueprintName = "LibXml2Swift"
             ReferencedContainer = "container:Coconut.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

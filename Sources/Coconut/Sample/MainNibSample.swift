@@ -8,22 +8,52 @@
 
 import Foundation
 
-class MainNibSample {
+
+public class MainNibSample : UIDefinitionDelegate {
     
-    // Delegate
-    private let appDelegate : ApplicationDelegate
+    // --- Implicit objects ---
     
-    // Window
-    private let window : Window
+    /// Application
+    private let application: Application
     
-    init?(withOwner owner: Any?) {
+    /// First responder
+    private var firstResponder: Responder
+    
+    // --- External objects ---
+    
+    
+    var window: Window? = nil
+    
+    init() {
+        self.application = Application.shared()
+        self.firstResponder = application
+    }
+    
+    // --- Buttons ---
+    
+    
+    
+    public func instantiate(owner: Any?, objects: [NSObjectProtocol]?) -> Bool {
         
-        guard owner != nil && owner is ApplicationDelegate  else {
-            return nil
+        guard owner != nil && owner is Application else {
+            return false
+        }
+        
+        // Set application
+        //let application = owner as! Application
+        
+        // Test obejcts
+        guard objects != nil && objects!.count >= 1 else {
+            return false
+        }
+        
+        // Find delegate
+        guard objects![0] is SimpleApplicationDelegate  else {
+            return false
         }
         
         // Cast to app delegate
-        appDelegate = owner as! ApplicationDelegate
+        let appDelegate = objects![0] as! SimpleApplicationDelegate
         
         // Creation de la fenetre principal
         window = Window(contentRect: NSRect(
@@ -32,16 +62,21 @@ class MainNibSample {
             )
         )
         
+        // Set window
+        appDelegate.window = window
+        
         // Add buttons to view
-        window.contentView?.addSubview(Button(title: "Hello button 1"))
-        window.contentView?.addSubview(Button(title: "Hello button 2"))
-        window.contentView?.addSubview(Button(title: "Hello button 3"))
-        window.contentView?.addSubview(Button(title: "Hello button 4"))
-        window.contentView?.addSubview(Button(title: "Hello button 5"))
+        window?.contentView?.addSubview(Button(title: "Hello button 1"))
+        window?.contentView?.addSubview(Button(title: "Hello button 2"))
+        window?.contentView?.addSubview(Button(title: "Hello button 3"))
+        window?.contentView?.addSubview(Button(title: "Hello button 4"))
+        window?.contentView?.addSubview(Button(title: "Hello button 5"))
         let quitButton = Button(title: "Quitter", action: ExitAction())
-        window.contentView?.addSubview(quitButton)
+        window?.contentView?.addSubview(quitButton)
         
         // Open window
-        window.makeKeyAndOrderFront(window)
+        window?.makeKeyAndOrderFront(window)
+    
+        return true
     }
 }

@@ -10,8 +10,10 @@ import Foundation
 
 import CGtk
 
+/// Define a button
 class Button : Control {
  
+    /// Button title
     public var title: String
     
     init(title: String, action: Action = EmptyAction()) {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Define a view with action
 public class Control : View {
 
     public internal(set) var action : Action

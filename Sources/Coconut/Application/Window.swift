@@ -9,7 +9,9 @@
 import Foundation
 import CGtk
 
-public class Window {
+
+// Define a window
+public class Window : Responder {
     
     /// GTK window pointer
     var window : UnsafeMutablePointer<GtkWidget>
@@ -33,6 +35,7 @@ public class Window {
         gtk_window_set_title(toWindow(widget: window), title)
     }
     
+    // TODO Rename
     public func makeKeyAndOrderFront(_ sender: Any?) {
         
         // Display view
@@ -44,18 +47,23 @@ public class Window {
     
     // --- Informations ---
     
+    // FIXME Implement
     public let windowNumber: Int = -1
     
     // --- Configuring ---
     
+    // FIXME Implement
     public var backgroundColor: Color! = nil
     
+    // FIXME Implement
     public var contentView: View? = nil
     
+    // FIXME Implement
     internal var viewController: ViewController? = nil
     
     // --- Sizing ---
     
+    /// Find window frame
     public var frame: NSRect {
         get {
             
@@ -71,8 +79,9 @@ public class Window {
         }
     }
     
-    // --- Titles ---
+    // --- Title ---
     
+    /// Get / Set title
     public var title: String {
         willSet {
             gtk_window_set_title(toWindow(widget: window), title)
@@ -81,12 +90,14 @@ public class Window {
     
     // --- Closing ---
     
+    // FIXME Implement
     public func close() {
         
     }
     
     // --- Screen ---
     
+    // FIXME Implement
     public var screen: Screen? {
         get {
             return nil
