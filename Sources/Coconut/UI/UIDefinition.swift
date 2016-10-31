@@ -24,7 +24,7 @@ public class UIDefinition {
     /// Bundle
     private var bundle : Bundle?
     
-    init?(name: String, bundle: Bundle?) {
+    public init?(name: String, bundle: Bundle?) {
         self.name = name
         self.bundle = bundle
     }

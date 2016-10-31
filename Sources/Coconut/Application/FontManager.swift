@@ -10,4 +10,7 @@ import Foundation
 
 public class FontManager {
     
+    public init() {
+        
+    }
 }

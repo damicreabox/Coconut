@@ -13,14 +13,23 @@ import CGtk
 // Define an application
 public class Application : Responder {
     
+    /// Running
+    private var running = false
+    
     /// Gtk application
-    internal let app : UnsafeMutablePointer<GtkApplication>
+    lazy internal var app : UnsafeMutablePointer<GtkApplication> = {
+        
+        // Create application
+        // FIXME GTK name
+        return gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE)
+        
+    } ()
     
     /// Main UI definiiton
-    var mainUi : UIDefinition
+    var mainUi : UIDefinition? = nil
     
     /// App delegate
-    var delegate : ApplicationDelegate
+    public var delegate : ApplicationDelegate? = nil
     
     /// First responder
     var firstResponder: Responder? = nil
@@ -30,10 +39,26 @@ public class Application : Responder {
     
     /// Return current App
     public class func shared() -> NSApplication {
+        if app == nil {
+            app = Application()
+        }
         return app!
     }
     
-    init?(delegate: ApplicationDelegate, uiName name: String) {
+    override init() {
+        super.init()
+        
+        // Init GTK library
+        gtk_init(nil, nil)
+        
+        // Set app
+        Application.app = self
+    }
+    
+    convenience init?(delegate: ApplicationDelegate, uiName name: String) {
+        
+        self.init()
+        
         // Open ui
         guard let uiDefinition = UIDefinition(nibNamed: name, bundle: nil) else {
             return nil
@@ -42,22 +67,13 @@ public class Application : Responder {
         self.delegate = delegate
         self.mainUi = uiDefinition
         
-        // Init GTK library
-        gtk_init(nil, nil)
-        
-        // Create application
-        // FIXME GTK name
-        app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE)
-        
-        super.init()
-        
-        // Set app
-        Application.app = self
+        // Test application
+        guard let ui = mainUi else {
+            return nil
+        }
         
         // Laund main nib file
-        guard mainUi.instantiate(owner: self, objects: [delegate]) else {
-            // FIXME add log
-            Application.app = nil
+        if !ui.instantiate(owner: self, objects: [delegate]) {
             return nil
         }
     }
@@ -65,18 +81,37 @@ public class Application : Responder {
     
     public func run() {
         
+        guard !running else {
+            return 
+        }
+        
+        // Set running
+        running = true
+        
         // Application did finish launching
-        delegate.applicationDidFinishLaunching(Notification(name: Notification.Name.init(rawValue: "NSApplicationDidFinishLaunching")))
+        if delegate != nil {
+            delegate!.applicationDidFinishLaunching(Notification(name: Notification.Name.init(rawValue: "NSApplicationDidFinishLaunching")))
+        }
         
         // Launch GTK main loop
         gtk_main ()
         
         // Application will terminate
-        delegate.applicationWillTerminate(Notification(name: Notification.Name.init(rawValue: "NSApplicationWillTerminate")))
+        if delegate != nil {
+            delegate!.applicationWillTerminate(Notification(name: Notification.Name.init(rawValue: "NSApplicationWillTerminate")))
+        }
     }
     
     /// Terminate application
     func terminate(_ sender: Any?) {
+        
+        if (!running) {
+            return
+        }
+        
+        // Set running
+        running = false
+        
         gtk_main_quit()
     }
 }
