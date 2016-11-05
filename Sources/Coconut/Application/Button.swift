@@ -16,7 +16,7 @@ public class Button : Control {
     /// Button title
     public var title: String
     
-    init(title: String, action: Action = EmptyAction()) {
+    public init(title: String, action: Action = EmptyAction()) {
         self.title = title
         super.init(action: action)
     }

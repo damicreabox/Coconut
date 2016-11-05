@@ -12,14 +12,18 @@ public protocol Action {
     func perform()
 }
 
-class EmptyAction : Action {
+public class EmptyAction : Action {
     public func perform() {
         print("Empty action")
     }
+    public init() {
+    }
 }
 
-class ExitAction : Action {
+public class ExitAction : Action {
     public func perform() {
         Application.shared().terminate(nil)
+    }
+    public init() {
     }
 }

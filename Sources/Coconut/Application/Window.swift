@@ -32,7 +32,6 @@ public class Window : Responder {
         contentView = ContainerView()
         
         self.title = title
-        gtk_window_set_title(toWindow(widget: window), title)
     }
     
     // TODO Rename
@@ -84,7 +83,7 @@ public class Window : Responder {
     /// Get / Set title
     public var title: String {
         willSet {
-            gtk_window_set_title(toWindow(widget: window), title)
+            gtk_window_set_title(toWindow(widget: window), newValue)
         }
     }
     
