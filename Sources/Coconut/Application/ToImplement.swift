@@ -1,5 +1,9 @@
 import Foundation
 
+public class FirstResponder {
+    public init() {}
+}
+
 public protocol AnimatablePropertyContainer {
     
 }

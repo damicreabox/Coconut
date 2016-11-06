@@ -29,7 +29,7 @@ public class Window : Responder {
         gtk_window_move(toWindow(widget: window), Int32(origin.x), Int32(origin.y))
         
         // Init container
-        contentView = ContainerView()
+        contentView = View()
         
         self.title = title
     }

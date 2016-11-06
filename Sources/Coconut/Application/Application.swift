@@ -103,7 +103,7 @@ public class Application : Responder {
     }
     
     /// Terminate application
-    func terminate(_ sender: Any?) {
+    public func terminate(_ sender: Any?) {
         
         if (!running) {
             return
