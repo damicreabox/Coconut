@@ -12,18 +12,20 @@ public protocol Action {
     func perform()
 }
 
-public class OjectAction<O> : Action {
-
-    let object: O
-    let action: (O) -> Void
+public class OjectAction<C, T> : Action {
     
-    public init(object: O, action: @escaping (O) -> Void) {
-        self.object = object
+    let caller: C
+    let target: T
+    let action: (C, T) -> Void
+    
+    public init(caller: C, target: T, action: @escaping (C, T) -> Void) {
+        self.caller = caller
+        self.target = target
         self.action = action
     }
     
     public func perform() {
-        action(object)
+        action(caller, target)
     }
 }
 
