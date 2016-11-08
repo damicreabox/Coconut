@@ -22,11 +22,16 @@ public class Window : Responder {
         // Convert point from cocoa to gtk
         let origin = gtkScreenPositionFromCocoa(origin: frame.origin)
         
+        let gtkWindow = toWindow (widget: window)
+        
         // Set size
-        gtk_window_set_default_size (toWindow (widget: window), Int32(frame.size.width), Int32(frame.size.height))
+        gtk_window_set_default_size (gtkWindow, Int32(frame.size.width), Int32(frame.size.height))
+        
+        // Set gravity
+        gtk_window_set_gravity(gtkWindow, GDK_GRAVITY_NORTH_WEST)
         
         // Set position
-        gtk_window_move(toWindow(widget: window), Int32(origin.x), Int32(origin.y))
+        gtk_window_move(gtkWindow, Int32(origin.x), Int32(origin.y))
         
         // Init container
         contentView = View()

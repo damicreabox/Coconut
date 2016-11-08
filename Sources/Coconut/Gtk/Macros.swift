@@ -16,6 +16,10 @@ func gtkScreenPositionFromCocoa(origin: NSPoint) -> NSPoint {
     return NSPoint(x: origin.x, y: CGFloat(height - Int32(origin.y)))
 }
 
+func convertPoint(point: NSPoint, frame: NSRect) -> NSPoint {
+    return NSPoint(x: point.x, y: frame.size.height - point.y)
+}
+
 func toWidget(pointer: UnsafeMutablePointer<gpointer>?) -> UnsafeMutablePointer<GtkWidget> {
     return unsafeBitCast(pointer, to: UnsafeMutablePointer<GtkWidget>.self)
 }
@@ -31,6 +35,10 @@ func toContainer(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePoint
 func toGrid(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkGrid> {
     return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkGrid>.self)
 }
+func toFixed(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<GtkFixed> {
+    return unsafeBitCast(widget, to: UnsafeMutablePointer<GtkFixed>.self)
+}
+
 
 func toGPointer(widget: UnsafeMutablePointer<GtkWidget>?) -> UnsafeMutablePointer<gpointer?> {
     return unsafeBitCast(widget, to: UnsafeMutablePointer<gpointer?>.self)

@@ -8,22 +8,45 @@
 
 import Foundation
 
-/// Define a view with action
-public class Control : View {
-
-    public var action : Action
+class ActionWrapper : Action {
     
-    override init() {
-        action = EmptyAction()
+    var action: Action? = nil
+    
+    public func perform() {
+        if let action = action {
+            action.perform()
+        }
+    }
+}
+
+/// Define a view with action
+public class Control : View, Action {
+
+    internal var actionWrapper : ActionWrapper
+    
+    public var action: Action? {
+        get {
+            return actionWrapper.action
+        }
+        
+        set {
+            actionWrapper.action = newValue
+        }
+    }
+    
+    init(action: Action? = nil) {
+        actionWrapper = ActionWrapper()
+        self.actionWrapper.action = action
         super.init()
     }
     
-    init(action: Action) {
-        self.action = action
-        super.init()
+    init(frame: NSRect, action: Action? = nil) {
+        actionWrapper = ActionWrapper()
+        self.actionWrapper.action = action
+        super.init(frame: frame)
     }
     
     public func perform() {
-        action.perform()
+        actionWrapper.perform()
     }
 }

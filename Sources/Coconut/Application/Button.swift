@@ -14,20 +14,26 @@ import CGtk
 public class Button : Control {
  
     /// Button title
-    public var title: String
+    public var title: String {
+        willSet {
+            gtk_button_set_label(toButton(widget: widget), newValue)
+        }
+    }
     
-    public init(title: String, action: Action = EmptyAction()) {
-        self.title = title
-        super.init(action: action)
+    public init(frame: NSRect) {
+        self.title = ""
+        super.init(frame: frame)
+        
+        widget = gtk_button_new_with_label (title)
+        
+        gtk_widget_set_size_request(widget, Int32(frame.width), Int32(frame.height))
+        
+        _ = connect(source: widget!, signal: "clicked", action: &actionWrapper)
     }
     
     // --- Internal GTK ---
     
     override internal func redraw(widget parent: UnsafeMutablePointer<GtkWidget>) -> UnsafeMutablePointer<GtkWidget>? {
-        
-        widget = gtk_button_new_with_label (title)
-        _ = connect(source: widget!, signal: "clicked", action: &action)
-        
         return widget
     }
 }

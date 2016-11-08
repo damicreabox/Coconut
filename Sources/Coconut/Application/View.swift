@@ -21,15 +21,18 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
     
     // --- Init ---
     
-    //init() {
-    //}
+    public override init() {
+        frame = NSRect()
+    }
+    
+    public init(frame: NSRect) {
+        self.frame = frame
+    }
     
     // --- Size ---
     
-    // FIXME Implement
-    public var frame : NSRect {
-        return NSRect(origin: NSPoint(x: 0, y: 0), size: NSSize(width: 0, height: 0))
-    }
+    /// View frame
+    public let frame : NSRect
     
     // FIXME Implement
     public var bounds : NSRect {
@@ -90,33 +93,69 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
         }
     }
     
+    // --- Constraints ---
+    
+    var constraints: [NSLayoutConstraint] {
+        get {
+            return [NSLayoutConstraint]()
+        }
+    }
+    
     // --- Internal GTK ---
     
     internal func redraw(widget parent: UnsafeMutablePointer<GtkWidget>) -> UnsafeMutablePointer<GtkWidget>? {
         
-        /* Here we construct the container that is going pack our buttons */
-        self.widget = gtk_grid_new ()
+        // Test constraints
+        let constraints = self.constraints
+        if (constraints.isEmpty) {
+            
+            // Create fixed container
+            self.widget = gtk_fixed_new()
+            
+            // Aprse views
+            for view in self.views {
+                
+                // Redraw
+                if let subWidget = view.redraw(widget: self.widget!) {
+                    
+                    // Covert point
+                    let origin = convertPoint(point: view.frame.origin, frame: frame)
+                    
+                    let fixed = toFixed(widget: self.widget)
+                    
+                    // Atache element
+                    gtk_fixed_put (fixed, subWidget, 0, 0)
+                    gtk_fixed_move(fixed, subWidget, Int32(origin.x), Int32(origin.y))
+                    
+                }
+            }
+            
+        } else {
+            /* Here we construct the container that is going pack our buttons */
+            self.widget = gtk_grid_new ()
+            
+            // Parse views
+            var index : Int32 = 0
+            for view in self.views {
+                // Redraw
+                if let subWidget = view.redraw(widget: self.widget!) {
+                    
+                    // Atache element
+                    gtk_grid_attach (toGrid(widget: self.widget), subWidget, 1, index, 2, 1)
+                    
+                }
+                
+                // Add index
+                index = index + 1
+            }
+        }
         
-        /* Pack the container in the window */
+        
+        // Pack the container in the window
         gtk_container_add (toContainer(widget: parent), self.widget)
         
         // Add view
         gtk_container_add(toContainer(widget: widget), self.widget)
-        
-        // Parse views
-        var index : Int32 = 0
-        for view in self.views {
-            // Redraw
-            if let subWidget = view.redraw(widget: self.widget!) {
-                
-                // Atache element
-                gtk_grid_attach (toGrid(widget: self.widget), subWidget, 1, index, 2, 1)
-                
-            }
-            
-            // Add index
-            index = index + 1
-        }
         
         return widget
 

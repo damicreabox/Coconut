@@ -31,9 +31,9 @@ func connect(source: UnsafeMutablePointer<GtkWidget>, signal: String,
     return gtk_connect(source, signal, callback, destination)
 }
 
-func connect(source: UnsafeMutablePointer<GtkWidget>, signal: String, action: UnsafeMutablePointer<Action>) -> UInt {
+func connect(source: UnsafeMutablePointer<GtkWidget>, signal: String, action: UnsafeMutablePointer<ActionWrapper>) -> UInt {
     let callback : SGGCallback = { (s, o) in
-        let action = unsafeBitCast(o, to: UnsafeMutablePointer<Action>.self)
+        let action = unsafeBitCast(o, to: UnsafeMutablePointer<ActionWrapper>.self)
         action.pointee.perform()
     }
     
