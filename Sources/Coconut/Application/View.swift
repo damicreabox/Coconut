@@ -95,11 +95,7 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
     
     // --- Constraints ---
     
-    var constraints: [NSLayoutConstraint] {
-        get {
-            return [NSLayoutConstraint]()
-        }
-    }
+    public var constraints = [NSLayoutConstraint]()
     
     // --- Internal GTK ---
     

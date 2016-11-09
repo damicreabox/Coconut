@@ -25,6 +25,7 @@ public typealias NSDraggingDestination = DraggingDestination
 public typealias NSAppearanceCustomization = AppearanceCustomization
 public typealias NSAccessibilityElementProtocol = AccessibilityElementProtocol
 public typealias NSAccessibility = Accessibility
+public typealias NSLayoutConstraint = LayoutConstraint
 
 // -- Application --
 

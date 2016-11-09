@@ -4,10 +4,6 @@ public class FirstResponder {
     public init() {}
 }
 
-public class NSLayoutConstraint {
-    
-}
-
 public protocol AnimatablePropertyContainer {
     
 }
