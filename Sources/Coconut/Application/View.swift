@@ -19,6 +19,9 @@ public class View : Responder, AnimatablePropertyContainer, UserInterfaceItemIde
     /// Flag to redraw
     public var needsDisplay: Bool = false
     
+    /// Define identifier
+    public var identifier: String? = nil
+    
     // --- Init ---
     
     public override init() {
