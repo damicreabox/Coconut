@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ViewConstraintType {
+public enum LayoutConstraintType {
     case top
     case bottom
     case left
@@ -20,10 +20,10 @@ public enum ViewConstraintType {
 public class LayoutConstraint {
     
     public let firstView: View?
-    public let firstViewConstraint: ViewConstraintType?
+    public let firstViewConstraint: LayoutConstraintType?
     
     public let secondView: View?
-    public let secondViewConstraint: ViewConstraintType?
+    public let secondViewConstraint: LayoutConstraintType?
     
     public let constant: Any?
     
@@ -35,8 +35,8 @@ public class LayoutConstraint {
         self.constant = nil
     }
     
-    public init(firstView: View? = nil, firstViewConstraint: ViewConstraintType? = nil,
-                secondView: View? = nil, secondViewConstraint: ViewConstraintType? = nil,
+    public init(firstView: View? = nil, firstViewConstraint: LayoutConstraintType? = nil,
+                secondView: View? = nil, secondViewConstraint: LayoutConstraintType? = nil,
                 constant: Any? = nil) {
         self.firstView = firstView
         self.firstViewConstraint = firstViewConstraint
